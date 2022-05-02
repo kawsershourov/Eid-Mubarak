@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/bg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 5s linear infinite;
+    animation-direction: alternate;
+    
+
+}
+
+section h1 {
+    font-size: 150px;
+    color: rgb(241, 233, 233);
+    font-family: 'Tangerine', cursive;
+
+    text-shadow: -9px 10px 1px #2322226b;
+    position: relative;
+}
+section h2 {
+    font-size: 30px;
+    color:#fff;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: -9px 10px 1px #2322226b;
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+}
+section h1::before{
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: -180px;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    transform: rotate(-20deg);
+}
+@keyframes floating{
+    0%{
+        left: 49%;
+
+
+    }
+    25%{
+        top: 49%;
+
+
+    }
+    75%{
+        left: 51%;
+
+
+    }
+    100%{
+
+        top: 51%;
+
+    }
+
+}
+.mosque{
+    background-image: url(..//img/mosque.png);
+    min-height: 200px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 450px;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    animation: amin 30s linear infinite;
+
+}
+
+
+.mosque::before{
+    content: '';
+    background-image: url(..//img/mosque.png);
+    min-height: 400px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 830px;
+    position: absolute;
+    bottom: -63px;
+    left: 0;
+    width: 100%;
+    opacity: .5;
+    animation: amin 30s linear infinite;
+    animation-direction: reverse;
+}
+
+@keyframes amin{
+    0%{
+        background-position: -100px;
+
+
+    }
+    
+    100%{
+
+        background-position: 1600px;
+
+    }
+
+}
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 80vh;
+
+
+
+}
